@@ -8,8 +8,8 @@ echo -e "\e[32m
  ██║   ██║██╔██╗ ██║██║     ██║██╔██╗ ██║█████╗        
  ██║   ██║██║╚██╗██║██║     ██║██║╚██╗██║██╔══╝        
  ╚██████╔╝██║ ╚████║███████╗██║██║ ╚████║███████╗      
-  ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝      \e[0m     
-\e[33m                                                      
+  ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝         
+                                                     
 ██╗  ██╗ █████╗  ██████╗██╗  ██╗██╗███╗   ██╗ ██████╗ 
 ██║  ██║██╔══██╗██╔════╝██║ ██╔╝██║████╗  ██║██╔════╝ 
 ███████║███████║██║     █████╔╝ ██║██╔██╗ ██║██║  ███╗
@@ -17,7 +17,24 @@ echo -e "\e[32m
 ██║  ██║██║  ██║╚██████╗██║  ██╗██║██║ ╚████║╚██████╔╝
 ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ 
                                                       
-  \e[0m                                                                                                 
+  \e[0m   
+  
+  \e[33m                                            
+___  ___     _                  _       _ _      
+|  \/  |    | |                | |     (_) |     
+| .  . | ___| |_ __ _ ___ _ __ | | ___  _| |_    
+| |\/| |/ _ \ __/ _` / __| '_ \| |/ _ \| | __|   
+| |  | |  __/ || (_| \__ \ |_) | | (_) | | |_    
+\_|  |_/\___|\__\__,_|___/ .__/|_|\___/|_|\__|   
+                         | |                     
+                         |_|                     
+ _____        _____                              
+|_   _|      |_   _|                             
+  | | _ __     | | ___ _ __ _ __ ___  _   ___  __
+  | || '_ \    | |/ _ \ '__| '_ ` _ \| | | \ \/ /
+ _| || | | |   | |  __/ |  | | | | | | |_| |>  < 
+ \___/_| |_|   \_/\___|_|  |_| |_| |_|\__,_/_/\_\
+  \e[0m                                                 
 
 \e[95m  +-+-+-+-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+ \e[0m  
         |M|e|t|a|s|p|l|o|i|t| |i|n| |T|e|r|m|u|x|
@@ -41,8 +58,7 @@ center " Loading..."
 source <(echo "c3Bpbm5lcj0oICd8JyAnLycgJy0nICdcJyApOwoKY291bnQoKXsKICBzcGluICYKICBwaWQ9JCEKICBmb3IgaSBpbiBgc2VxIDEgMTBgCiAgZG8KICAgIHNsZWVwIDE7CiAgZG9uZQoKICBraWxsICRwaWQgIAp9CgpzcGluKCl7CiAgd2hpbGUgWyAxIF0KICBkbyAKICAgIGZvciBpIGluICR7c3Bpbm5lcltAXX07IAogICAgZG8gCiAgICAgIGVjaG8gLW5lICJcciRpIjsKICAgICAgc2xlZXAgMC4yOwogICAgZG9uZTsKICBkb25lCn0KCmNvdW50" | base64 -d)
 
 echo
-\e[95m
-center "*** Dependencies installation..." \e[0m 
+center "*** Dependencies installation..." 
 
 # Add gushmazuko repository to install ruby 2.7.2 version
 echo 'deb https://github.com/OnlineHacKing/Metasploit_Termux/raw/master gushmazuko main'  | tee $PREFIX/etc/apt/sources.list.d/gushmazuko.list
