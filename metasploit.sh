@@ -19,9 +19,9 @@ echo -e "\e[32m
                                                       
   \e[0m                                                                                                 
 
-    +-+-+-+-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+
-    |M|e|t|a|s|p|l|o|i|t| |i|n| |T|e|r|m|u|x|
-    +-+-+-+-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+
+\e[95m  +-+-+-+-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+ \e[0m  
+        |M|e|t|a|s|p|l|o|i|t| |i|n| |T|e|r|m|u|x|
+\e[36m  +-+-+-+-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+ \e[0m  
          +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
          |O|n|l|i|n|e| |H|a|c|k|i|n|g|
          +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
@@ -37,7 +37,7 @@ center() {
 }
 
 # Loading spinner
-center " Loading..."
+center "\e[91m Loading...\e[0m "
 source <(echo "c3Bpbm5lcj0oICd8JyAnLycgJy0nICdcJyApOwoKY291bnQoKXsKICBzcGluICYKICBwaWQ9JCEKICBmb3IgaSBpbiBgc2VxIDEgMTBgCiAgZG8KICAgIHNsZWVwIDE7CiAgZG9uZQoKICBraWxsICRwaWQgIAp9CgpzcGluKCl7CiAgd2hpbGUgWyAxIF0KICBkbyAKICAgIGZvciBpIGluICR7c3Bpbm5lcltAXX07IAogICAgZG8gCiAgICAgIGVjaG8gLW5lICJcciRpIjsKICAgICAgc2xlZXAgMC4yOwogICAgZG9uZTsKICBkb25lCn0KCmNvdW50" | base64 -d)
 
 echo
