@@ -4,9 +4,12 @@ echo "
     +-+-+-+-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+
     |M|e|t|a|s|p|l|o|i|t| |i|n| |T|e|r|m|u|x|
     +-+-+-+-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+
-            +-+-+ +-+-+-+-+-+-+-+-+-+-+
-            |b|y| |G|u|s|h|m|a|z|u|k|o|
-            +-+-+ +-+-+-+-+-+-+-+-+-+-+
+         +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
+         |O|n|l|i|n|e| |H|a|c|k|i|n|g|
+         +-+-+-+-+-+-+ +-+-+-+-+-+-+-+
+	          +-+-+-+-+-+
+                  |S|U|M|A|N|
+	          +-+-+-+-+-+
 "
 
 center() {
@@ -23,10 +26,10 @@ echo
 center "*** Dependencies installation..."
 
 # Add gushmazuko repository to install ruby 2.7.2 version
-echo 'deb https://github.com/gushmazuko/metasploit_in_termux/raw/master gushmazuko main'  | tee $PREFIX/etc/apt/sources.list.d/gushmazuko.list
+echo 'deb https://github.com/OnlineHacKing/Metasploit_Termux/raw/master gushmazuko main'  | tee $PREFIX/etc/apt/sources.list.d/gushmazuko.list
 
 pkg install -y gnupg
-curl -fsSL https://raw.githubusercontent.com/gushmazuko/metasploit_in_termux/master/gushmazuko-gpg.pubkey | gpg --dearmor | tee $PREFIX/etc/apt/trusted.gpg.d/gushmazuko-repo.gpg
+curl -fsSL https://raw.githubusercontent.com/OnlineHacKing/Metasploit_Termux/master/gushmazuko-gpg.pubkey | gpg --dearmor | tee $PREFIX/etc/apt/trusted.gpg.d/gushmazuko-repo.gpg
 
 # Set low priority for all gushmazuko repository (for security purposes)
 # Set highest priority for ruby package from gushmazuko repository
@@ -92,17 +95,14 @@ termux-elf-cleaner /data/data/com.termux/files/usr/lib/ruby/gems/2.4.0/gems/pg-0
 echo
 center "*** Database configuration..."
 cd $HOME/metasploit-framework/config
-curl -sLO https://raw.githubusercontent.com/gushmazuko/metasploit_in_termux/master/database.yml
+curl -sLO https://raw.githubusercontent.com/OnlineHacKing/Metasploit_Termux/master/database.yml
 
-mkdir -p $PREFIX/var/lib/postgresql
-initdb $PREFIX/var/lib/postgresql
-
-pg_ctl -D $PREFIX/var/lib/postgresql start
+mkdir -p $PREFIX/var/lib/postgresql/
 createuser msf
 createdb msf_database
 
 cd $HOME
-curl -sLO https://raw.githubusercontent.com/gushmazuko/metasploit_in_termux/master/postgresql_ctl.sh
+curl -sLO https://raw.githubusercontent.com/OnlineHacKing/Metasploit_Termux/master/postgresql_ctl.sh
 chmod +x postgresql_ctl.sh
 
 echo
